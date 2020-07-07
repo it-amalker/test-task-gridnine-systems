@@ -2,14 +2,14 @@ import React from 'react';
 import { uniqueId } from 'lodash';
 import { format } from 'date-fns';
 
-const FlightCards = ({ flights }) => {
-  console.log(flights);
-
-  const renderCards = () => {
+const FlightCards = ({ flights, filters }) => {
+  const renderCards = (filteredFlights) => {
+    if (filteredFlights.length === 0) {
+      return <div>Nothing was found :(</div>;
+    }
     return (
       <ul className="flight-cards">
-        {flights.map(({ flight }) => {
-          console.log(flight);
+        {filteredFlights.map(({ flight }) => {
           const { segments, duration } = flight.legs[0];
           const lastSegmentIndex = segments.length - 1;
           const departureCity = segments[0].departureCity.caption;
@@ -77,7 +77,29 @@ const FlightCards = ({ flights }) => {
     );
   };
 
-  return flights.length > 0 ? renderCards() : <div>Nothing was found :(</div>;
+  const applyFilters = () => {
+    let filteredFlights = Object.assign(flights, {});
+
+    if (filters.noTransfers) {
+      filteredFlights = filteredFlights.filter(
+        ({ flight }) => flight.legs[0].segments.length === 1,
+      );
+    }
+    if (filters.minPrice) {
+      filteredFlights = filteredFlights.filter(
+        ({ flight }) => flight.price.total.amount >= filters.minPrice,
+      );
+    }
+    if (filters.maxPrice) {
+      filteredFlights = filteredFlights.filter(
+        ({ flight }) => flight.price.total.amount <= filters.maxPrice,
+      );
+    }
+    console.log(filteredFlights);
+    return renderCards(filteredFlights);
+  };
+
+  return applyFilters();
 };
 
 export default FlightCards;
