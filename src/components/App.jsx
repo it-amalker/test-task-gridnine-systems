@@ -5,11 +5,16 @@ import Sort from './Sort';
 
 const App = () => {
   const [flights, setFlights] = useState(flightsResponse.result.flights);
+  const [filters, setFilters] = useState({
+    noTransfers: false,
+    minPrice: null,
+    maxPrice: null,
+  });
 
   return (
     <>
-      <Sort flights={flights} setFlights={setFlights} />
-      <FlightCards flights={flights} />
+      <Sort flights={flights} setFlights={setFlights} setFilters={setFilters} />
+      <FlightCards flights={flights} filters={filters} />
     </>
   );
 };
