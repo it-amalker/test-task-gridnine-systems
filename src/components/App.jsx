@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
+import flightsResponse from '../data/flights.json';
+import FlightCards from './FlightCards';
+import Sort from './Sort';
 
 const App = () => {
-  return <div>Test</div>;
+  const [flights, setFlights] = useState(flightsResponse.result.flights);
+
+  return (
+    <>
+      <Sort flights={flights} setFlights={setFlights} />
+      <FlightCards flights={flights} />
+    </>
+  );
 };
 
 export default App;
