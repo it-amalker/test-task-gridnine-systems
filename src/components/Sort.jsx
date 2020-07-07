@@ -6,7 +6,7 @@ const sortOptions = {
   duration: (a, b) => b.flight.legs[0].duration - a.flight.legs[0].duration,
 };
 
-const Sort = ({ flights, setFlights }) => {
+const Sort = ({ flights, setFlights, setFilters }) => {
   const sortFlights = (sortType) => {
     const sorted = [...flights].sort((a, b) => {
       return sortOptions[sortType](a, b);
@@ -14,8 +14,25 @@ const Sort = ({ flights, setFlights }) => {
     setFlights(sorted);
   };
 
-  const changeSort = (e) => {
+  const handleChangeSort = (e) => {
     sortFlights(e.target.value);
+  };
+
+  const handleChangeFilter = (e) => {
+    const isNoTransferOn = e.target.checked;
+    setFilters((prev) => ({ ...prev, noTransfers: isNoTransferOn }));
+  };
+
+  const handleChangePriceMin = (e) => {
+    const minPrice = e.target.value === '' ? null : Number(e.target.value);
+    console.log(minPrice);
+    setFilters((prev) => ({ ...prev, minPrice }));
+  };
+
+  const handleChangePriceMax = (e) => {
+    const maxPrice = e.target.value === '' ? null : Number(e.target.value);
+    console.log(maxPrice);
+    setFilters((prev) => ({ ...prev, maxPrice }));
   };
 
   return (
@@ -32,7 +49,7 @@ const Sort = ({ flights, setFlights }) => {
                   name="sort-type"
                   id="ascending-price"
                   value="asc"
-                  onChange={changeSort}
+                  onChange={handleChangeSort}
                   defaultChecked
                 />
                 ascending prices
@@ -46,7 +63,7 @@ const Sort = ({ flights, setFlights }) => {
                   name="sort-type"
                   id="descending-price"
                   value="desc"
-                  onChange={changeSort}
+                  onChange={handleChangeSort}
                 />
                 descending prices
               </label>
@@ -59,9 +76,61 @@ const Sort = ({ flights, setFlights }) => {
                   name="sort-type"
                   id="duration-sort"
                   value="duration"
-                  onChange={changeSort}
+                  onChange={handleChangeSort}
                 />
                 travel duration
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset className="filter-field">
+          <legend className="filter-field-title">Filter by:</legend>
+          <ul className="filter-type-list">
+            <li className="filter-type-item">
+              <label className="filter-type-label" htmlFor="no-transfer">
+                <input
+                  className="filter-type-checkbox"
+                  type="checkbox"
+                  name="filter-type"
+                  id="no-transfer"
+                  onChange={handleChangeFilter}
+                />
+                no transfers
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset className="filter-price-field">
+          <legend className="filter-price-field-title">Price:</legend>
+          <ul className="filter-price-type-list">
+            <li className="filter-price-type-item">
+              <label
+                className="filter-price-type-label"
+                htmlFor="price-filter-min"
+              >
+                from
+                <input
+                  className="filter-price-type-input"
+                  type="number"
+                  name="filter-price-type"
+                  id="price-filter-min"
+                  onChange={handleChangePriceMin}
+                />
+              </label>
+            </li>
+            <li className="filter-price-type-item">
+              <label
+                className="filter-price-type-label"
+                htmlFor="price-filter-max"
+              >
+                to
+                <input
+                  className="filter-price-type-input"
+                  type="number"
+                  name="filter-price-type"
+                  id="price-filter-max"
+                  onChange={handleChangePriceMax}
+                />
               </label>
             </li>
           </ul>
