@@ -4,7 +4,14 @@
 
 #app {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   width: 100vw;
   height: 100vh;
+}
+.flight-card {
+  list-style: none;
+
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 15px;
 }
