@@ -1,6 +1,6 @@
 {
   "name": "test-task-gridnine-systems",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Test task from Gridnine Systems",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "date-fns": "^2.14.0",
+    "lodash": "^4.17.15",
     "normalize.css": "^8.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
