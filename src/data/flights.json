@@ -6,7 +6,7 @@
         "flight": {
           "carrier": {
             "uid": "AF",
-            "caption": "Aeroflot",
+            "caption": "Air France",
             "airlineCode": "AF"
           },
           "price": {
@@ -140,7 +140,7 @@
                   },
                   "airline": {
                     "uid": "AF",
-                    "caption": "Aeroflot",
+                    "caption": "Air France",
                     "airlineCode": "AF"
                   },
                   "starting": true,
@@ -193,7 +193,7 @@
                   },
                   "airline": {
                     "uid": "AF",
-                    "caption": "Aeroflot",
+                    "caption": "Air France",
                     "airlineCode": "AF"
                   },
                   "starting": false,
@@ -250,7 +250,7 @@
         "flight": {
           "carrier": {
             "uid": "AZ",
-            "caption": "�������� ��������",
+            "caption": "Alitalia",
             "airlineCode": "AZ"
           },
           "price": {
@@ -503,7 +503,7 @@
         "flight": {
           "carrier": {
             "uid": "LH",
-            "caption": "���������",
+            "caption": "Lufthansa",
             "airlineCode": "LH"
           },
           "docoDocaNeededInfo": {
@@ -759,7 +759,7 @@
         "flight": {
           "carrier": {
             "uid": "LH",
-            "caption": "���������",
+            "caption": "Lufthansa",
             "airlineCode": "LH"
           },
           "docoDocaNeededInfo": {
@@ -1015,7 +1015,7 @@
         "flight": {
           "carrier": {
             "uid": "KL",
-            "caption": "���",
+            "caption": "KLM Royal Dutch Airlines",
             "airlineCode": "KL"
           },
           "price": {
@@ -1264,7 +1264,7 @@
         "flight": {
           "carrier": {
             "uid": "LH",
-            "caption": "���������",
+            "caption": "Lufthansa",
             "airlineCode": "LH"
           },
           "docoDocaNeededInfo": {
@@ -1520,7 +1520,7 @@
         "flight": {
           "carrier": {
             "uid": "AZ",
-            "caption": "�������� ��������",
+            "caption": "Alitalia",
             "airlineCode": "AZ"
           },
           "price": {
@@ -1773,7 +1773,7 @@
         "flight": {
           "carrier": {
             "uid": "LX",
-            "caption": "�����",
+            "caption": "Swiss International Air Lines",
             "airlineCode": "LX"
           },
           "price": {
@@ -2026,7 +2026,7 @@
         "flight": {
           "carrier": {
             "uid": "AZ",
-            "caption": "�������� ��������",
+            "caption": "Alitalia",
             "airlineCode": "AZ"
           },
           "price": {
@@ -2279,7 +2279,7 @@
         "flight": {
           "carrier": {
             "uid": "LO",
-            "caption": "���",
+            "caption": "LOT Polish Airlines",
             "airlineCode": "LO"
           },
           "price": {
@@ -2523,7 +2523,7 @@
         "flight": {
           "carrier": {
             "uid": "LO",
-            "caption": "���",
+            "caption": "LOT Polish Airlines",
             "airlineCode": "LO"
           },
           "price": {
@@ -2776,7 +2776,7 @@
         "flight": {
           "carrier": {
             "uid": "TP",
-            "caption": "���",
+            "caption": "TAP Air Portugal",
             "airlineCode": "TP"
           },
           "price": {
@@ -3015,7 +3015,7 @@
         "flight": {
           "carrier": {
             "uid": "SU",
-            "caption": "��������",
+            "caption": "Aeroflot",
             "airlineCode": "SU"
           },
           "price": {
@@ -3271,7 +3271,7 @@
         "flight": {
           "carrier": {
             "uid": "IB",
-            "caption": "������",
+            "caption": "Iberia Airlines",
             "airlineCode": "IB"
           },
           "price": {
@@ -3527,7 +3527,7 @@
         "flight": {
           "carrier": {
             "uid": "BT",
-            "caption": "��� ������",
+            "caption": "airBaltic",
             "airlineCode": "BT"
           },
           "price": {
@@ -3786,7 +3786,7 @@
         "flight": {
           "carrier": {
             "uid": "IB",
-            "caption": "������",
+            "caption": "Iberia Airlines",
             "airlineCode": "IB"
           },
           "price": {
@@ -4042,7 +4042,7 @@
         "flight": {
           "carrier": {
             "uid": "KL",
-            "caption": "���",
+            "caption": "KLM Royal Dutch Airlines",
             "airlineCode": "KL"
           },
           "price": {
@@ -4286,7 +4286,7 @@
         "flight": {
           "carrier": {
             "uid": "AF",
-            "caption": "��� �����",
+            "caption": "Air France",
             "airlineCode": "AF"
           },
           "price": {
@@ -4535,7 +4535,7 @@
         "flight": {
           "carrier": {
             "uid": "LH",
-            "caption": "���������",
+            "caption": "Lufthansa",
             "airlineCode": "LH"
           },
           "docoDocaNeededInfo": {
@@ -4791,7 +4791,7 @@
         "flight": {
           "carrier": {
             "uid": "AF",
-            "caption": "��� �����",
+            "caption": "Air France",
             "airlineCode": "AF"
           },
           "price": {
@@ -5040,7 +5040,7 @@
         "flight": {
           "carrier": {
             "uid": "LH",
-            "caption": "���������",
+            "caption": "Lufthansa",
             "airlineCode": "LH"
           },
           "docoDocaNeededInfo": {
@@ -5296,7 +5296,7 @@
         "flight": {
           "carrier": {
             "uid": "KL",
-            "caption": "���",
+            "caption": "KLM Royal Dutch Airlines",
             "airlineCode": "KL"
           },
           "price": {
@@ -5540,7 +5540,7 @@
         "flight": {
           "carrier": {
             "uid": "UX",
-            "caption": "��� ������",
+            "caption": "Air Europa",
             "airlineCode": "UX"
           },
           "price": {
@@ -5792,7 +5792,7 @@
         "flight": {
           "carrier": {
             "uid": "TK",
-            "caption": "�������� ���������",
+            "caption": "Turkish Airlines",
             "airlineCode": "TK"
           },
           "price": {
@@ -6048,7 +6048,7 @@
         "flight": {
           "carrier": {
             "uid": "LX",
-            "caption": "�����",
+            "caption": "Swiss International Air Lines",
             "airlineCode": "LX"
           },
           "price": {
@@ -6301,7 +6301,7 @@
         "flight": {
           "carrier": {
             "uid": "S7",
-            "caption": "������",
+            "caption": "S7 Airlines",
             "airlineCode": "S7"
           },
           "docoDocaNeededInfo": {
@@ -6565,7 +6565,7 @@
         "flight": {
           "carrier": {
             "uid": "TK",
-            "caption": "�������� ���������",
+            "caption": "Turkish Airlines",
             "airlineCode": "TK"
           },
           "price": {
@@ -6821,7 +6821,7 @@
         "flight": {
           "carrier": {
             "uid": "LH",
-            "caption": "���������",
+            "caption": "Lufthansa",
             "airlineCode": "LH"
           },
           "docoDocaNeededInfo": {
