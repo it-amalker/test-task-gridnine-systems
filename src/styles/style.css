@@ -4,7 +4,6 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-
   color: #425668;
 }
 
@@ -18,10 +17,12 @@ body {
 
 .sort-aside {
   width: 30%;
+  min-width: 240px;
 }
 
 .flight-cards-wrapper {
   width: 65%;
+  min-width: 540px;
 }
 
 .flight-cards {
@@ -158,5 +159,59 @@ body {
 
 .flight-card-btn:active {
   background-color: #a8120c;
+  font-weight: bold;
+}
+
+.sort-field,
+.filter-field,
+.filter-price-field {
+  margin-bottom: 30px;
+  border-color: #425668;
+}
+
+.sort-field-title,
+.filter-field-title,
+.filter-price-field-title {
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+.sort-list,
+.filter-list,
+.filter-price-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  margin: 0.9rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sort-item,
+.filter-item,
+.filter-price-item {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.sort-radio,
+.filter-checkbox {
+  margin-right: 5px;
+}
+
+.filter-price-label {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.filter-price-input {
+  width: 75%;
+  margin-left: 10px;
+}
+
+.empty-results {
+  text-align: center;
+  font-size: 1.2rem;
   font-weight: bold;
 }
