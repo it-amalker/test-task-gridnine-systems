@@ -12,10 +12,10 @@ const App = () => {
   });
 
   return (
-    <>
+    <div className="app-container">
       <Sort flights={flights} setFlights={setFlights} setFilters={setFilters} />
       <FlightCards flights={flights} filters={filters} />
-    </>
+    </div>
   );
 };
 
