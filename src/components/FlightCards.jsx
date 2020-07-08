@@ -1,6 +1,7 @@
 import React from 'react';
 import { uniqueId } from 'lodash';
 import { format } from 'date-fns';
+import airplaneLogo from '../img/airplane.png';
 
 const FlightCards = ({ flights, filters }) => {
   const renderCards = (filteredFlights) => {
@@ -29,12 +30,15 @@ const FlightCards = ({ flights, filters }) => {
             <li key={uniqueId()} className="flight-card">
               <div className="catalog__card-info-wrap">
                 <div className="flight-card-header">
-                  <img
-                    className="airline-company-logo"
-                    alt="airline company logo"
-                  />
+                  <div className="airline-company-logo-wrap">
+                    <img
+                      className="airline-company-logo"
+                      src={airplaneLogo}
+                      alt="airline company logo"
+                    />
+                  </div>
                   <div className="price-wrap">
-                    <b className="price">{flight.price.total.amount}</b>
+                    <b className="price">{`${flight.price.total.amount} ₽`}</b>
                     <p className="price-info">
                       The cost for one adult passenger
                     </p>
@@ -45,23 +49,29 @@ const FlightCards = ({ flights, filters }) => {
                     <p className="flight-departure-info">
                       {`${departureCity}, ${departureAirport} (${departureAirportCode})`}
                     </p>
-                    →
+                    <span className="flight-segments-arrow">⟶</span>
                     <p className="flight-arrival-info">{`${arrivalCity}, ${arrivalAirport} (${arrivalAirportCode})`}</p>
-                    <hr />
                   </div>
-                  <div>
+                  <hr />
+                  <div className="flight-dates-wrap">
                     <div className="departure-date">
-                      {format(new Date(departureDate), 'HH:mm dd LLLL EEE')}
+                      <span className="departure-time">
+                        {format(new Date(departureDate), 'HH:mm')}
+                      </span>
+                      {format(new Date(departureDate), 'dd LLLL EEE')}
                     </div>
                     <div className="flight-duration">
-                      {`${Math.floor(duration / 60)} h ${duration % 60} min`}
+                      {`🕑 ${Math.floor(duration / 60)} h ${duration % 60} min`}
                     </div>
                     <div className="arrival-date">
-                      {format(new Date(arrivalDate), 'dd LLLL EEE HH:mm')}
+                      {format(new Date(arrivalDate), 'dd LLLL EEE')}
+                      <span className="arrival-time">
+                        {format(new Date(arrivalDate), 'HH:mm')}
+                      </span>
                     </div>
                   </div>
-                  <div className="airline-company-info-wrap">
-                    <p className="airline-company-info">
+                  <div className="carrier-wrap">
+                    <p className="carrier-info">
                       {`Flight performed by: ${flight.carrier.caption}`}
                     </p>
                   </div>
@@ -99,7 +109,7 @@ const FlightCards = ({ flights, filters }) => {
     return renderCards(filteredFlights);
   };
 
-  return applyFilters();
+  return <div className="flight-cards-wrapper">{applyFilters()}</div>;
 };
 
 export default FlightCards;
