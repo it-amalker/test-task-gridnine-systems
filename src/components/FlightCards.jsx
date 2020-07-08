@@ -6,7 +6,7 @@ import airplaneLogo from '../img/airplane.png';
 const FlightCards = ({ flights, filters }) => {
   const renderCards = (filteredFlights) => {
     if (filteredFlights.length === 0) {
-      return <div>Nothing was found :(</div>;
+      return <div className="empty-results">Nothing was found, sorry :(</div>;
     }
     return (
       <ul className="flight-cards">
