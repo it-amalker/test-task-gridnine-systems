@@ -40,94 +40,88 @@ const Sort = ({ flights, setFlights, setFilters }) => {
       <form>
         <fieldset className="sort-field">
           <legend className="sort-field-title">Sort by:</legend>
-          <ul className="sort-type-list">
-            <li className="sort-type-item">
-              <label className="sort-type-label" htmlFor="ascending-price">
+          <ul className="sort-list">
+            <li className="sort-item">
+              <label className="sort-label" htmlFor="ascending-price">
                 <input
-                  className="sort-type-radio"
+                  className="sort-radio"
                   type="radio"
-                  name="sort-type"
+                  name="sort-radio"
                   id="ascending-price"
                   value="asc"
                   onChange={handleChangeSort}
                   defaultChecked
                 />
-                ascending prices
+                - ascending prices
               </label>
             </li>
-            <li className="sort-type-item">
-              <label className="sort-type-label" htmlFor="descending-price">
+            <li className="sort-item">
+              <label className="sort-label" htmlFor="descending-price">
                 <input
-                  className="sort-type-radio"
+                  className="sort-radio"
                   type="radio"
-                  name="sort-type"
+                  name="sort-radio"
                   id="descending-price"
                   value="desc"
                   onChange={handleChangeSort}
                 />
-                descending prices
+                - descending prices
               </label>
             </li>
-            <li className="sort-type-item">
-              <label className="sort-type-label" htmlFor="duration-sort">
+            <li className="sort-item">
+              <label className="sort-label" htmlFor="duration-sort">
                 <input
-                  className="sort-type-radio"
+                  className="sort-radio"
                   type="radio"
-                  name="sort-type"
+                  name="sort-radio"
                   id="duration-sort"
                   value="duration"
                   onChange={handleChangeSort}
                 />
-                travel duration
+                - travel duration
               </label>
             </li>
           </ul>
         </fieldset>
         <fieldset className="filter-field">
           <legend className="filter-field-title">Filter by:</legend>
-          <ul className="filter-type-list">
-            <li className="filter-type-item">
-              <label className="filter-type-label" htmlFor="no-transfer">
+          <ul className="filter-list">
+            <li className="filter-item">
+              <label className="filter-label" htmlFor="no-transfer">
                 <input
-                  className="filter-type-checkbox"
+                  className="filter-checkbox"
                   type="checkbox"
-                  name="filter-type"
+                  name="filter-no-transfers"
                   id="no-transfer"
                   onChange={handleChangeFilter}
                 />
-                no transfers
+                - no transfers
               </label>
             </li>
           </ul>
         </fieldset>
         <fieldset className="filter-price-field">
           <legend className="filter-price-field-title">Price:</legend>
-          <ul className="filter-price-type-list">
-            <li className="filter-price-type-item">
-              <label
-                className="filter-price-type-label"
-                htmlFor="price-filter-min"
-              >
-                from
+          <ul className="filter-price-list">
+            <li className="filter-price-item">
+              <label className="filter-price-label" htmlFor="price-filter-min">
+                <span>From</span>
                 <input
-                  className="filter-price-type-input"
+                  className="filter-price-input"
                   type="number"
-                  name="filter-price-type"
+                  name="filter-price-min"
                   id="price-filter-min"
                   onChange={handleChangePriceMin}
                 />
               </label>
             </li>
-            <li className="filter-price-type-item">
-              <label
-                className="filter-price-type-label"
-                htmlFor="price-filter-max"
-              >
-                to
+            <li className="filter-price-item">
+              <label className="filter-price-label" htmlFor="price-filter-max">
+                <span>To</span>
                 <input
-                  className="filter-price-type-input"
+                  className="filter-price-input"
                   type="number"
-                  name="filter-price-type"
+                  name="filter-price-max"
                   id="price-filter-max"
                   onChange={handleChangePriceMax}
                 />
