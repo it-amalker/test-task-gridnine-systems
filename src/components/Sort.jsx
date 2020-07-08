@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const sortOptions = {
   asc: (a, b) => a.flight.price.total.amount - b.flight.price.total.amount,
@@ -7,6 +8,8 @@ const sortOptions = {
 };
 
 const Sort = ({ flights, setFlights, setFilters }) => {
+  const { t } = useTranslation();
+
   const sortFlights = (sortType) => {
     const sorted = [...flights].sort((a, b) => {
       return sortOptions[sortType](a, b);
@@ -39,7 +42,7 @@ const Sort = ({ flights, setFlights, setFilters }) => {
     <aside className="sort-aside">
       <form>
         <fieldset className="sort-field">
-          <legend className="sort-field-title">Sort by:</legend>
+          <legend className="sort-field-title">{`${t('Sort')}:`}</legend>
           <ul className="sort-list">
             <li className="sort-item">
               <label className="sort-label" htmlFor="ascending-price">
@@ -52,7 +55,7 @@ const Sort = ({ flights, setFlights, setFilters }) => {
                   onChange={handleChangeSort}
                   defaultChecked
                 />
-                - ascending prices
+                {`- ${t('Asc')}`}
               </label>
             </li>
             <li className="sort-item">
@@ -65,7 +68,7 @@ const Sort = ({ flights, setFlights, setFilters }) => {
                   value="desc"
                   onChange={handleChangeSort}
                 />
-                - descending prices
+                {`- ${t('Desc')}`}
               </label>
             </li>
             <li className="sort-item">
@@ -78,13 +81,13 @@ const Sort = ({ flights, setFlights, setFilters }) => {
                   value="duration"
                   onChange={handleChangeSort}
                 />
-                - travel duration
+                {`- ${t('Duration')}`}
               </label>
             </li>
           </ul>
         </fieldset>
         <fieldset className="filter-field">
-          <legend className="filter-field-title">Filter by:</legend>
+          <legend className="filter-field-title">{`${t('Filter')}:`}</legend>
           <ul className="filter-list">
             <li className="filter-item">
               <label className="filter-label" htmlFor="no-transfer">
@@ -95,17 +98,19 @@ const Sort = ({ flights, setFlights, setFilters }) => {
                   id="no-transfer"
                   onChange={handleChangeFilter}
                 />
-                - no transfers
+                {`- ${t('No transfers')}`}
               </label>
             </li>
           </ul>
         </fieldset>
         <fieldset className="filter-price-field">
-          <legend className="filter-price-field-title">Price:</legend>
+          <legend className="filter-price-field-title">{`${t(
+            'Price',
+          )}:`}</legend>
           <ul className="filter-price-list">
             <li className="filter-price-item">
               <label className="filter-price-label" htmlFor="price-filter-min">
-                <span>From</span>
+                <span>{`${t('From')}`}</span>
                 <input
                   className="filter-price-input"
                   type="number"
@@ -117,7 +122,7 @@ const Sort = ({ flights, setFlights, setFilters }) => {
             </li>
             <li className="filter-price-item">
               <label className="filter-price-label" htmlFor="price-filter-max">
-                <span>To</span>
+                <span>{`${t('To')}`}</span>
                 <input
                   className="filter-price-input"
                   type="number"
