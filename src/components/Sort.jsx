@@ -3,7 +3,7 @@ import React from 'react';
 const sortOptions = {
   asc: (a, b) => a.flight.price.total.amount - b.flight.price.total.amount,
   desc: (a, b) => b.flight.price.total.amount - a.flight.price.total.amount,
-  duration: (a, b) => b.flight.legs[0].duration - a.flight.legs[0].duration,
+  duration: (a, b) => a.flight.legs[0].duration - b.flight.legs[0].duration,
 };
 
 const Sort = ({ flights, setFlights, setFilters }) => {
@@ -36,7 +36,7 @@ const Sort = ({ flights, setFlights, setFilters }) => {
   };
 
   return (
-    <aside>
+    <aside className="sort-aside">
       <form>
         <fieldset className="sort-field">
           <legend className="sort-field-title">Sort by:</legend>
