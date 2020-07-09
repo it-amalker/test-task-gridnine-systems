@@ -16,7 +16,7 @@ const App = () => {
 
   return (
     <>
-      <div>
+      <div className="lang-container">
         <Languages activeLang={activeLang} setActiveLang={setActiveLang} />
       </div>
       <div className="app-container">

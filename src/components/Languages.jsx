@@ -10,7 +10,7 @@ const Languages = ({ activeLang, setActiveLang }) => {
   };
 
   return (
-    <div className="lang-container">
+    <>
       <button
         className={`lang-btn ${activeLang === 'ru' ? 'active' : ''}`}
         type="button"
@@ -25,7 +25,7 @@ const Languages = ({ activeLang, setActiveLang }) => {
       >
         en
       </button>
-    </div>
+    </>
   );
 };
 
