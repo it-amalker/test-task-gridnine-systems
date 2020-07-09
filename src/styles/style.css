@@ -7,11 +7,17 @@ body {
   color: #425668;
 }
 
+#app {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
 .app-container {
   display: flex;
   justify-content: space-between;
-  width: 80%;
-  margin: 0 auto;
   padding: 10px 20px;
   padding-top: 0;
 }
@@ -20,8 +26,8 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
+  min-width: 820px;
   padding: 10px 20px;
 }
 
@@ -32,6 +38,10 @@ body {
 
   background-color: #fff;
   cursor: pointer;
+}
+
+.lang-btn:last-of-type {
+  margin-right: 0;
 }
 
 .lang-btn:hover {
@@ -48,10 +58,6 @@ body {
   text-decoration: underline;
 }
 
-.lang-btn:last-of-type {
-  margin-right: 0;
-}
-
 .sort-aside {
   width: 30%;
   min-width: 240px;
@@ -64,7 +70,8 @@ body {
 
 .flight-cards {
   margin: 0;
-  padding: 5px 20px;
+  padding: 5px 0;
+  padding-left: 20px;
 
   list-style: none;
 }
