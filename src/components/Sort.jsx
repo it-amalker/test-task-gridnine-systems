@@ -28,13 +28,11 @@ const Sort = ({ flights, setFlights, setFilters }) => {
 
   const handleChangePriceMin = (e) => {
     const minPrice = e.target.value === '' ? null : Number(e.target.value);
-    console.log(minPrice);
     setFilters((prev) => ({ ...prev, minPrice }));
   };
 
   const handleChangePriceMax = (e) => {
     const maxPrice = e.target.value === '' ? null : Number(e.target.value);
-    console.log(maxPrice);
     setFilters((prev) => ({ ...prev, maxPrice }));
   };
 
@@ -110,7 +108,7 @@ const Sort = ({ flights, setFlights, setFilters }) => {
           <ul className="filter-price-list">
             <li className="filter-price-item">
               <label className="filter-price-label" htmlFor="price-filter-min">
-                <span>{`${t('From')}`}</span>
+                <span>{t('From')}</span>
                 <input
                   className="filter-price-input"
                   type="number"
@@ -122,7 +120,7 @@ const Sort = ({ flights, setFlights, setFilters }) => {
             </li>
             <li className="filter-price-item">
               <label className="filter-price-label" htmlFor="price-filter-max">
-                <span>{`${t('To')}`}</span>
+                <span>{t('To')}</span>
                 <input
                   className="filter-price-input"
                   type="number"

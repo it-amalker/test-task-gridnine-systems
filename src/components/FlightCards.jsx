@@ -35,7 +35,7 @@ const FlightCards = ({ flights, filters, activeLang }) => {
 
           return (
             <li key={uniqueId()} className="flight-card">
-              <div className="catalog__card-info-wrap">
+              <div className="flight-card-info-wrap">
                 <div className="flight-card-header">
                   <div className="airline-company-logo-wrap">
                     <img
